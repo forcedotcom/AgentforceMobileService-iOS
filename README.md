@@ -1,13 +1,13 @@
 # AgentforceService
 
-A comprehensive Swift framework for building conversational AI experiences powered by the Salesforce Agentforce platform, supporting both Employee Agents and Service Agents (MIAW).
+A comprehensive Swift framework for building conversational AI experiences powered by the Salesforce Agentforce platform, supporting both Employee Agents and Service Agents via Salesforce Enhanced Chat.
 
 `AgentforceService` provides a complete toolkit for developers to integrate intelligent, conversational agents into their iOS applications. It handles session management, message passing, real-time event handling, voice conversations, and multi-channel agent support, allowing you to focus on building engaging user interactions.
 
 ## Features
 
 ### Core Capabilities
--   **Dual Agent Support**: Supports both Employee Agents (Agentforce) and Service Agents (MIAW/Core SDK)
+-   **Dual Agent Support**: Supports both Employee Agents (Agentforce) and Service Agents (Salesforce Enhanced Chat)
 -   **Session Management**: Comprehensive session lifecycle management with enhanced tracking and information
 -   **Rich Messaging**: Send and receive various message types including text, replies, choices, and attachments
 -   **Real-time Communication**: Server-Sent Events (SSE) for low-latency, bidirectional communication
@@ -24,47 +24,20 @@ A comprehensive Swift framework for building conversational AI experiences power
 ### Advanced Messaging
 -   **Interactive Choices**: Support for carousel, buttons, and quick reply message formats
 -   **Typing Indicators**: Real-time typing status for enhanced user experience
--   **Message Acknowledgments**: Read receipts and delivery confirmations (MIAW)
--   **Conversation Transcripts**: Download conversation history as PDF (MIAW)
+-   **Message Acknowledgments**: Read receipts and delivery confirmations (Service Agents)
+-   **Conversation Transcripts**: Download conversation history as PDF (Service Agents)
 
 ### Event Streaming
 -   **Categorized Event Streams**: Separate publishers for message, system, and status events
 -   **Event Filtering**: Built-in categorization for efficient event processing
 -   **Custom Event Handlers**: Support for instrumentation and telemetry
 
-### Service Agent (MIAW) Features
+### Service Agent Features
 -   **Core SDK Integration**: Native SMIClientCore SDK support for Service Agents
 -   **Pre-chat Forms**: Automatic handling of required pre-chat fields
 -   **Agent Availability**: Check agent availability and queue status
 -   **Conversation Management**: Create, list, end, and manage multiple conversations
 -   **Session Context**: Enhanced context variables for Service Agent interactions
-
-## Architecture
-
-The `AgentforceService` framework features a modular, protocol-oriented architecture:
-
-### Core Components
--   **`AgentforceServiceProvider`**: Factory for creating agent services with dependency injection
--   **`AgentforceServicing`**: Protocol defining agent interaction interface
--   **`AgentforceServiceImpl`**: Standard implementation for Employee Agents
--   **`MIAWAgentforceServiceImpl`**: Service Agent implementation using Core SDK
-
-### Supporting Systems
--   **Token Management**: `TokenManager` handles authentication token lifecycle and refresh
--   **SSE Infrastructure**: Custom Server-Sent Events implementation for real-time streaming
--   **Voice Components**: LiveKit integration with audio rendering and transcription processing
--   **Event Conversion**: Bridges between MIAW/Core SDK events and Agentforce events
-
-### Data Models
--   **Core Models**: `AgentforceAPIModels` for request/response structures
--   **Enhanced Models**: Session management and conversation history models
--   **MIAW Models**: Service Agent specific data structures
--   **Event Models**: Comprehensive event types for all agent interactions
-
-### Network Layer
--   **`AgentforceAPI`**: Employee Agent API communication
--   **`ConfigurationAPI`**: Agent configuration and discovery
--   **`MessagingAPI`**: MIAW/Service Agent API endpoints
 
 ## Requirements
 
@@ -97,6 +70,7 @@ At the top of your podfile, add the Salesforce Mobile iOS Spec Repo above the co
 
 ```ruby
 source 'https://github.com/forcedotcom/SalesforceMobileSDK-iOS-Specs.git'
+source 'https://github.com/livekit/podspecs.git'
 source 'https://cdn.cocoapods.org/'
 ```
 
