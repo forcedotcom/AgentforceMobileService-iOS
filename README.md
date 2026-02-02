@@ -41,7 +41,7 @@ A comprehensive Swift framework for building conversational AI experiences power
 
 ## Requirements
 
--   iOS 16.0+
+-   iOS 16.6+
 -   Xcode 16.0+
 -   Swift 5.0+
 
