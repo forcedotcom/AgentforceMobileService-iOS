@@ -24,13 +24,21 @@ let package = Package(
             url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/4.9.11/AgentforceMobileService-260-1.xcframework.zip",
             checksum: "91996e19bac4f10988d59960b70596eb440c1b4b6d36fe7724bbb75183ec3198"
         ),
+        // Shim: the binary imports "LiveKitClient" but SPM builds it as "LiveKit"
+        .target(
+            name: "LiveKitClient",
+            dependencies: [
+                .product(name: "LiveKit", package: "client-sdk-swift"),
+            ],
+            path: "Sources/LiveKitClient"
+        ),
         .target(
             name: "AgentforceServiceTarget",
             dependencies: [
                 "AgentforceService",
+                "LiveKitClient",
                 .product(name: "SalesforceNetwork", package: "SalesforceMobileInterfaces-iOS"),
                 .product(name: "SalesforceLogging", package: "SalesforceMobileInterfaces-iOS"),
-                .product(name: "LiveKit", package: "client-sdk-swift"),
                 .product(name: "Swift-InAppMessaging", package: "Swift-Package-InAppMessaging"),
             ],
             path: "Sources/AgentforceServiceTarget"
