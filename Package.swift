@@ -21,8 +21,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AgentforceService",
-            url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/4.10.5/AgentforceMobileService-260-2.xcframework.zip",
-            checksum: "6a5e6ce34abd747423e0dcf74b0c38edd6974c45af5e9b74911bbd7a4f285aae"
+            url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/5.1.0/AgentforceMobileService-260-3.xcframework.zip",
+            checksum: "d73d2ada39b4395be14ed4818c72fe990027c62b80269f6bc4e7661039406a61"
         ),
         .target(
             name: "AgentforceServiceTarget",
