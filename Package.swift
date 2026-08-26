@@ -40,8 +40,8 @@ let package = Package(
             // For a hosted release, replace with:
             //   url: "https://<host>/AgentforceService-<version>.xcframework.zip",
             //   checksum: "<output of swift package compute-checksum>"
-            url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/6.11.4/AgentforceMobileService-262-1-3-spm.xcframework.zip",
-            checksum: "26e0520a615207dcafc80c25d76bf27df7ab0720c922a83090a027a8d96395a0"
+            url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/6.11.5-rc3/AgentforceMobileService-262-1-4-RC3-spm.xcframework.zip",
+            checksum: "1bec818e16a6629bfb10f687db95896e1ae74a6a7cbe05ada04208e4d70b94e6"
         ),
         .target(
             name: "AgentforceServiceTarget",
