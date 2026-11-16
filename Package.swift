@@ -10,7 +10,7 @@ import PackageDescription
 let package = Package(
     name: "AgentforceService",
     platforms: [
-        .iOS(.v17)
+        .iOS("18.0")
     ],
     products: [
         // Intentionally NOT `type: .dynamic` (the source Package.swift
@@ -31,7 +31,7 @@ let package = Package(
     // docs/spm-binary-distribution.md "Dependency-list alignment".
     dependencies: [
         .package(url: "https://github.com/forcedotcom/SalesforceMobileInterfaces-iOS.git", from: "1.0.0"),
-        .package(url: "https://github.com/Salesforce-Async-Messaging/SMIClientCore-iOS.swift.git", .upToNextMinor(from: "1.13.0")),
+        .package(url: "https://github.com/Salesforce-Async-Messaging/SMIClientCore-iOS.swift.git", .upToNextMinor(from: "1.13.3")),
     ],
     targets: [
         .binaryTarget(
@@ -40,8 +40,8 @@ let package = Package(
             // For a hosted release, replace with:
             //   url: "https://<host>/AgentforceService-<version>.xcframework.zip",
             //   checksum: "<output of swift package compute-checksum>"
-            url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/264.0.1/AgentforceMobileService-264-0-1-spm.xcframework.zip",
-            checksum: "003ce7267d5dfb761661ca59a3a26c913860d4d525dea3734d379068de11f02d"
+            url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/264.2.0-rc1/AgentforceMobileService-264-2-0-RC1-spm.xcframework.zip",
+            checksum: "1425b475247a73ee2b4d540494c2223febdce57e5ad35769f54f69dea449d297"
         ),
         .target(
             name: "AgentforceServiceTarget",
