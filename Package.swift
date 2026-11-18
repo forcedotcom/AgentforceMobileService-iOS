@@ -10,7 +10,7 @@ import PackageDescription
 let package = Package(
     name: "AgentforceService",
     platforms: [
-        .iOS(.v17)
+        .iOS("18.0")
     ],
     products: [
         // Intentionally NOT `type: .dynamic` (the source Package.swift
@@ -40,8 +40,8 @@ let package = Package(
             // For a hosted release, replace with:
             //   url: "https://<host>/AgentforceService-<version>.xcframework.zip",
             //   checksum: "<output of swift package compute-checksum>"
-            url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/264.0.1/AgentforceMobileService-264-0-1-spm.xcframework.zip",
-            checksum: "003ce7267d5dfb761661ca59a3a26c913860d4d525dea3734d379068de11f02d"
+            url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/264.1.0/AgentforceMobileService-264-1-0-spm.xcframework.zip",
+            checksum: "81522b363696177425d3b0aca91e35ca048f897adbc2cdfc9505acb756c05cf7"
         ),
         .target(
             name: "AgentforceServiceTarget",
