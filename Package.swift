@@ -41,7 +41,7 @@ let package = Package(
             //   url: "https://<host>/AgentforceService-<version>.xcframework.zip",
             //   checksum: "<output of swift package compute-checksum>"
             url: "https://github.com/forcedotcom/AgentforceMobileService-iOS/releases/download/264.1.0/AgentforceMobileService-264-1-0-spm.xcframework.zip",
-            checksum: "81522b363696177425d3b0aca91e35ca048f897adbc2cdfc9505acb756c05cf7"
+            checksum: "8acbfeda76261b77fee0393c5ac5a2dd97494c63dbdc81a6cf5fa8447e12af7b"
         ),
         .target(
             name: "AgentforceServiceTarget",
